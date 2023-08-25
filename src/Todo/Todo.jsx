@@ -1,8 +1,32 @@
-export default function Todo() {
+export default function todo () {
 
-    return (
-        <div>
-          <h1>Home</h1>
-        </div>
-    );
+  const [atividade, setAtividade] = useState("");
+  const [lista, setLista] = useState([]);
+
+  const salvar = (e) => {
+    e.preventDefault();
+    setLista([...lista, {
+      atividade: atividade
+    }])
+  }
+
+  return (
+    <div>
+      <Link to="/">home</Link>
+      <h1>Lista de Atividades</h1>
+
+      <p>{atividade}</p>
+
+      <form onSubmit={salvar}>
+
+        <input value={atividade}
+             onChange={(e) => setAtividade(e.target.value)} />
+
+        <button>ADD</button>
+      </form>
+
+      {lista.map((ativ)=> <p>{ativ.atividade}</p>)}
+
+    </div>
+  ); 
 }
