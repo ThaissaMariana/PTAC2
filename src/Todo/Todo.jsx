@@ -14,6 +14,16 @@ export default function todo () {
         setId(id + 1);
         setAtividade("");
     };
+    const remover = (id) => {
+      setLista(lista.filter((ativ) => (ativ.id !== id ? lista : null)))
+      const auxLista = [];
+      lista.map((lista) => {
+        if(lista.id !== id){
+          auxLista.push(lista);
+        }
+      });
+      setLista(auxLista);
+    }
 
   return (
     <div>
