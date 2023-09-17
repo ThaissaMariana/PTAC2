@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import './style.css';
 
-export default function Todo () {
+export default function ToDo () {
   const [lista, setLista] = useState([]);
   const [id,setId] = useState(1);
   const [produto, setProduto] = useState("");
