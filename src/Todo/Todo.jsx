@@ -8,17 +8,19 @@ export default function ToDo () {
   const [produto, setProduto] = useState("");
   const [categoria, setCategoria] = useState("");
   const [preco, setPreco] = useState("");
-  const [exibirMensagem, setExibirMensagem] = useState(false);
+  const [mostrarMensagem, setMostrarMensagem] = useState(false);
 
     const salvar =(e) =>{
         e.preventDefault();
         setLista([...lista, {
-                produto: produto, categoria: categoria, preco: preco, id: id }]);
+                produto: produto, categoria: categoria, preco: preco, 
+                id: id 
+              }]);
         setId(id + 1);
         setProduto("");
         setCategoria("");
         setPreco("");
-        setExibirMensagem(true);
+        setMostrarMensagem(true);
     };
     const remover = (id) => {
      const listaFiltrada = lista.filter((ativ) => ativ.id !== id);
@@ -30,11 +32,11 @@ export default function ToDo () {
       <h1>Login</h1>
       <h1>Seus dados</h1>
       < form onSubmit={salvar}>
-      < div className="input-container">
+      < div className="input-tamanho">
       <label htmlFor="produto">Nome:</label>
       <input
       id="produto"
-      className="pink-border-input"
+      className="border-lista"
       onChange={(e) => setProduto(e.target.value)} 
       type="text"
       value={Nome}
@@ -42,7 +44,7 @@ export default function ToDo () {
       <label htmlFor="categoria">Nome:</label>
       <input
       id="categoria"
-      className="pink-border-input"
+      className="border-lista"
       onChange={(e) => setCategoria(e.target.value)} 
       type="text"
       value={Nome}
@@ -50,29 +52,29 @@ export default function ToDo () {
       <label htmlFor="preco">Nome:</label>
       <input
       id="preco"
-      className="pink-border-input"
+      className="border-lista"
       onChange={(e) => setPreco(e.target.value)} 
       type="text"
       value={Nome}
       />
-      <button className="pink-border-button">add</button>
+      <button className="button-red">add</button>
       </div>
       </form>
   
-      {exibirMensagem && (
-        <p className="mensagem-cor-de-rosa">Parabéns, voce foi registrado!</p>
+      {mostrarMensagem && (
+        <p>Parabéns, voce foi registrado!</p>
       )}
 
      <div>
-      <div className="value-area">
+      <div className="tamanhos">
         {lista.map((ativ) => (
         <div key={ativ.id}>
           <p>Produto: {ativ.produto}</p>
           <p>Categoria: {ativ.categoria}</p>
-          <p>Preco: {ativ.preco}</p>
-         <button classeName="pink-border-button" onClick={() => remover(ativ.id)}>Remover</button>
+          <p>R$: {ativ.preco}</p>
+         <button classeName="button-red" onClick={() => remover(ativ.id)}>Remover</button>
       </div>
-        ))}
+        ))}                                                                                                                       
      </div>
     </div>
     </div>
