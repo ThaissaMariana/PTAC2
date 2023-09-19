@@ -28,7 +28,7 @@ export default function ToDo () {
     }
 
   return (
-    <div>
+    <div class="container">
     <Link to="/">home</Link>
     <h1 class="nome">Produtos Hello Kitty</h1>
     <form onSubmit={salvar}>
@@ -45,7 +45,7 @@ export default function ToDo () {
       <input value={preco} type="text"
       onChange={(e) =>{ setPreco(e.target.value)}}/>
       
-      <button>ADD</button>
+      <button className="button-red">ADD</button>
     </form>
         {lista.map((ativ) => (
         <div key={ativ.id}>
