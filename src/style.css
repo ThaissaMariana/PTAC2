@@ -3,7 +3,8 @@ body {
   }
   
   .button-red{
-    color: #A90623;
+    color: whitesmoke;
+    background-color: #A90623;
     font-family: Atma, cursive;
     border: none;
     cursor: pointer;
@@ -33,4 +34,9 @@ body {
     overflow-y: auto;
     max-height: 90px;
     margin-top: 30px;
+  }
+
+  .nome{
+    color: #A90623;
+    font-family: Atma, cursive;
   }

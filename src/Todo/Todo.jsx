@@ -30,18 +30,18 @@ export default function ToDo () {
   return (
     <div>
     <Link to="/">home</Link>
-    <h1>Produtos Hello Kitty</h1>
+    <h1 class="nome">Produtos Hello Kitty</h1>
     <form onSubmit={salvar}>
   
-  <p>Produto:</p>
+  <p class="nome">Produto:</p>
       <input value={produto} type="text"
       onChange={(e) =>{ setProduto(e.target.value)}}/>
 
-  <p>Categoria do produto:</p>
+  <p class="nome">Categoria do produto:</p>
       <input value={categoria} type="text"
       onChange={(e) =>{ setCategoria(e.target.value)}}/>
 
-   <p>Preço do produto:</p>
+   <p class="nome">Preço do produto:</p>
       <input value={preco} type="text"
       onChange={(e) =>{ setPreco(e.target.value)}}/>
       
@@ -49,9 +49,9 @@ export default function ToDo () {
     </form>
         {lista.map((ativ) => (
         <div key={ativ.id}>
-          <p>Produto: {ativ.produto}</p>
-          <p>Categoria: {ativ.categoria}</p>
-          <p>R$: {ativ.preco}</p>
+          <p class="nome">Produto: {ativ.produto}</p>
+          <p class="nome">Categoria: {ativ.categoria}</p>
+          <p class="nome">R$: {ativ.preco}</p>
          <button className="button-red" onClick={() => remover(ativ.id)}>Remover</button>
       </div>
       
