@@ -42,4 +42,22 @@ body {
     color: #A90623;
     font-family: Atma, cursive;
   }
+
+  .produto-card{
+    background-color: #FFFF;
+    
+    display: inline-block;
+    width: 290px;
+    height: 250px;
+    padding: 5px;
+    margin: 20px;
+    overflow: hidden;
+  }
+
+   .imagem{
+    height: 350px;
+    width: 290px;
+    
+  }
+  
   

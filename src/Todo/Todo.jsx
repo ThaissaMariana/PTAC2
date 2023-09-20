@@ -9,11 +9,12 @@ export default function ToDo () {
   const [categoria, setCategoria] = useState("");
   const [preco, setPreco] = useState("");
   const [mostrarMensagem, setMostrarMensagem] = useState(false);
+  const [imagem, setImagem] = useState("");
 
     const salvar =(e) =>{
         e.preventDefault();
         setLista([...lista, {
-                produto: produto, categoria: categoria, preco: preco, 
+                produto: produto, categoria: categoria, imagem: imagem, 
                 id: id 
               }]);
         setId(id + 1);
@@ -21,6 +22,7 @@ export default function ToDo () {
         setCategoria("");
         setPreco("");
         setMostrarMensagem(true);
+        setImagem("");
     };
     const remover = (id) => {
      const listaFiltrada = lista.filter((ativ) => ativ.id !== id);
@@ -42,16 +44,16 @@ export default function ToDo () {
       onChange={(e) =>{ setCategoria(e.target.value)}}/>
 
    <p class="nome">Preço do produto:</p>
-      <input value={preco} type="text"
-      onChange={(e) =>{ setPreco(e.target.value)}}/>
+      <input value={imagem} type="text"
+      onChange={(e) =>{ setImagem(e.target.value)}}/>
       
       <button className="button-red">ADD</button>
     </form>
         {lista.map((ativ) => (
         <div key={ativ.id}>
+          <img src={ativ.imagem} alt="" class="produto-card" />
           <p class="nome">Produto: {ativ.produto}</p>
           <p class="nome">Categoria: {ativ.categoria}</p>
-          <p class="nome">R$: {ativ.preco}</p>
          <button className="button-red" onClick={() => remover(ativ.id)}>Remover</button>
       </div>
       
