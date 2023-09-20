@@ -47,17 +47,16 @@ body {
     background-color: #FFFF;
     
     display: inline-block;
-    width: 290px;
-    height: 250px;
+    width: 400px;
+    height: 500px;
     padding: 5px;
     margin: 20px;
     overflow: hidden;
   }
 
-   .imagem{
+    .imagem{
     height: 350px;
     width: 290px;
     
   }
-  
   

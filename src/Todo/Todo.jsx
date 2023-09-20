@@ -43,18 +43,18 @@ export default function ToDo () {
       <input value={categoria} type="text"
       onChange={(e) =>{ setCategoria(e.target.value)}}/>
 
-   <p class="nome">Preço do produto:</p>
+   <p class="nome">Imagem:</p>
       <input value={imagem} type="text"
       onChange={(e) =>{ setImagem(e.target.value)}}/>
       
       <button className="button-red">ADD</button>
     </form>
         {lista.map((ativ) => (
-        <div key={ativ.id}>
-          <img src={ativ.imagem} alt="" class="produto-card" />
+        <div class="produto-card" key={ativ.id}>
+          <img src={ativ.imagem} alt="" class="imagem" />
           <p class="nome">Produto: {ativ.produto}</p>
           <p class="nome">Categoria: {ativ.categoria}</p>
-         <button className="button-red" onClick={() => remover(ativ.id)}>Remover</button>
+         <button class="button-red" onClick={() => remover(ativ.id)}>Remover</button>
       </div>
       
         ))}  
