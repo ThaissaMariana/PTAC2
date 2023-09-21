@@ -20,6 +20,7 @@ body {
   .home-nome{
     color: #A90623;
     font-family: Atma, cursive;
+    text-shadow: 2px 2px 3px #ffffff
   }
 
   .container{
@@ -81,3 +82,10 @@ body {
       height: 400px;
       width: 400px;
     }
+
+    .img{
+    height: 90px;
+    width: 100px;
+    margin-left: 10px;
+  }
+  

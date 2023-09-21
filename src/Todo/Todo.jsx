@@ -47,7 +47,7 @@ export default function ToDo () {
       <input value={imagem} type="text"
       onChange={(e) =>{ setImagem(e.target.value)}}/>
       
-      <button className="button-red">ADD</button>
+      <button className="button-red">Adicionar</button>
     </form>
         {lista.map((ativ) => (
         <div class="produto-card" key={ativ.id}>

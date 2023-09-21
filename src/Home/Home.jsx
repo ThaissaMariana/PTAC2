@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <div>
             <Link to="/todo">todo</Link>
-            <h1 class="home-nome">Produtos Hello Kitty</h1>
+            <h1 class="home-nome"><img class ="img" src="https://assets.stickpng.com/images/5eaaad3cad89b60004c4c7c8.png" alt=""></img>Produtos Hello Kitty</h1>
             <img src="https://64.media.tumblr.com/2daa10a683da64c3008f888b41e02402/1552c74e4f9174a7-f9/s1280x1920/e620a7e2d4a29ef4a654e204264ba71c6e2d1c28.gif" alt="" class="imagem-home"/>
             <div class="produto-card"><img class="image" src="https://acdn.mitiendanube.com/stores/001/740/961/products/screenshot_2023-05-09-06-56-41-059-edit_com-instagram-android1-84ed7996f3fcaa052116836478759855-640-0.jpg" alt=""></img>
             <p class="nome">Categoria: Decoração</p>
