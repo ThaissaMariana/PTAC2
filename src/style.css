@@ -27,7 +27,30 @@ body {
     text-align: center;
   }
   
+  .nome:hover{
+    padding: 5px;
+    margin: 0;
+    font-size: 15px;
+    font-family:'Paprika', sans-serif;
+    white-space: normal;
+  }
+
   .nome{
+    padding: 5px;
+    font-size: 15px;
+    font-family:'Paprika', sans-serif;
+    color: #A90623;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+ .name{
+  color: #A90623;
+  font-family:'Paprika', sans-serif;
+ }
+  .nomee{
     color: #A90623;
     font-family: Atma, cursive;
   }
